@@ -206,8 +206,10 @@ async function solvePuzzleAsync(initialTiles) {
 
   // IDA*メイン探索関数
   let threshold = manhattan(initialTiles);
+  console.log(`[HELP AI IDA*] threshold start from ${threshold}`);
   let solutionMoves = [];
   let batchCounter = 0;
+  let thresholdUpdateCount = 0; // しきい値更新回数
 
   async function search(path, g) {
     const state = path[path.length - 1];
@@ -250,6 +252,8 @@ async function solvePuzzleAsync(initialTiles) {
     if (t === "FOUND") break;
     if (t === Infinity) return [];
     threshold = t;
+    thresholdUpdateCount++;
+    console.log(`[HELP AI IDA*] threshold updated to ${threshold} (${thresholdUpdateCount} times updated)`);
   }
   return solutionMoves.reverse();
 }
@@ -261,6 +265,7 @@ async function autoSolve() {
   helpBtn.textContent = `trial ${trialCount.toLocaleString()}`;
   helpBtn.disabled = true;
   console.log(`[HELP AI] trialCount: ${trialCount}`);
+  console.log(`[HELP AI] solution: ${solution.length} sreps`);
   console.log(`[HELP AI] trial end at: ${timerLabel.textContent}`);
 
   let index = 0;
