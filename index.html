@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>puzzle select</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #121212;
+      color: #ccc;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      min-height: 100vh;
+      overflow-y: auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #eee;
+    }
+
+    .link-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 80%;
+      max-width: 300px;
+    }
+
+    a.clock-link {
+      display: block;
+      text-align: center;
+      padding: 15px 20px;
+      background-color: #1e1e1e;
+      color: #fff;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    a.clock-link:hover {
+      background-color: #333;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.8rem;
+      color: #666;
+      margin-bottom: 70px;
+    }
+
+    footer a {
+      color: #bb86fc;
+      text-decoration: none;
+    }
+  </style>
+  <!-- OGP meta tags -->
+  <meta property="og:title" content="Slide Puzzle - スライドパズルゲーム" />
+  <meta property="og:description" content="シンプル＆ダークテーマの4x4スライドパズル。スマホ・PC両対応。タップでぬるっと動きます！" />
+  <meta property="og:image" content="https://kubo-4ka.github.io/slide-puzzle-size-4/thumbnail.png" />
+  <meta property="og:url" content="https://kubo-4ka.github.io/slide-puzzle-size-4/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Slide Puzzle" />
+</head>
+
+<body>
+  <h1>puzzle select</h1>
+  <div class="link-container">
+    <a href="./v401_sync_A/index.html" class="clock-link"> v401_sync_A</a>
+    <a href="./v402_sync_IDA/index.html" class="clock-link"> v402_sync_IDA</a>
+    <a href="./v403_async_IDA/index.html" class="clock-link"> v403_async_IDA</a>
+    <a href="./v404_async_IDA_batch/index.html" class="clock-link"> v404_async_IDA_batch</a>
+  </div>
+  <footer> <a href="https://qiita.com/kubo4ka/" target="_blank">about</a></footer>
+</body>
+
+</html>

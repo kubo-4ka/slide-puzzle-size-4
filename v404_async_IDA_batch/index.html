@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slide Puzzle</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- OGP meta tags -->
+  <meta property="og:title" content="Slide Puzzle - スライドパズルゲーム" />
+  <meta property="og:description" content="シンプル＆ダークテーマの3x3スライドパズル。スマホ・PC両対応。タップでぬるっと動きます！" />
+  <meta property="og:image" content="https://kubo-4ka.github.io/slide-puzzle/thumbnail.png" />
+  <meta property="og:url" content="https://kubo-4ka.github.io/slide-puzzle/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Slide Puzzle" />
+
+</head>
+<body>
+  <div class="container">
+    <h1>Slide Puzzle</h1>
+    <h3>HELP AI might take a few minutes</h3>
+    <div class="status">
+      <span id="timerLabel">Time: <span id="timer">0.0</span> s</span>
+      <span id="clearMessage" class="hidden">Clear !!</span>
+    </div>
+    <div id="board" class="board"></div>
+    <div class="button-group">
+      <button id="startBtn" class="fixed-button">START</button>
+      <button id="helpBtn" class="fixed-button" disabled>HELP AI !!</button>
+    </div>
+  </div>
+  <footer> <a href="https://qiita.com/kubo4ka/" target="_blank">about</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
