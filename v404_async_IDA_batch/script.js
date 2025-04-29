@@ -228,10 +228,12 @@ async function solvePuzzleAsync(initialTiles) {
 
       if (trialCount % 10000 === 0) {
         helpBtn.textContent = `trial ${trialCount.toLocaleString()}`;
+      }
+      if (trialCount % 100000 === 0) {
         console.log(`[HELP AI] trialCount now: ${trialCount}`);
       }
 
-      if (batchCounter >= 100) {
+      if (batchCounter >= 1000) {
         await new Promise(resolve => setTimeout(resolve, 0));
         batchCounter = 0;
       }
